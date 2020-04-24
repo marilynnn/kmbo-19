@@ -35,15 +35,15 @@ int main()
 
 // обработчик случаев повреждения данных
 	LList b;
-//	try {
-//		std::ifstream out("otest.txt");
-//		out.exceptions(std::ifstream::failbit);
-//		out >> b;
-//	}
-
-//	catch (std::ios_base::failure &fail) {
-//		std::cout <<"oshybla"<< fail.what();
-//	}
+	try {
+		std::ifstream out("otest.txt");
+		out.exceptions(std::ifstream::failbit);
+		out >> b;
+	}
+	
+	catch (std::ios_base::failure &fail) {
+		std::cout <<"Corrapted data:"<< fail.what();
+	}
 //обработчик ошибки выделения памяти
 	try {
 		while (true) {
